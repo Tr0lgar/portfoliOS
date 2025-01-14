@@ -74,7 +74,7 @@ body {
     min-width: 400px;
     min-height: 300px;
     background: rgba(255, 255, 255, 0.5);
-    backdrop-filter: blur(60px);
+    backdrop-filter: blur(20px);
     border-radius: 8px;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
     border: none;
@@ -233,13 +233,13 @@ body {
 .contact-form input:focus,
 .contact-form textarea:focus {
     outline: none;
-    border-color: #1a82eb;
+    border-color: rgb(13, 172, 193);
     background: #f9f9f9;
 }
 
 .contact-form button {
     padding: 12px 24px;
-    background: #1a82eb;
+    background: rgb(13, 172, 193);
     border: none;
     color: white;
     border-radius: 8px;

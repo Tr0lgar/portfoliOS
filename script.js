@@ -42,6 +42,7 @@ class PortfoliOS {
     createWindow(appId) {
         const window = document.createElement('div');
         window.className = 'window';
+        window.id = appId;
         window.dataset.appId = appId;
         window.style.width = '600px';
         window.style.height = '400px';
@@ -52,7 +53,7 @@ class PortfoliOS {
         const configs = {
             portfoliOS: { title: 'portfoliOS', color: '#e0e0e0', content: this.createPortfoliOSContent() },
             about: { title: 'À Propos', color: '#e0e0e0', content: this.createAboutContent() },
-            projects: { title: 'Projets', color: '#e0e0e0', content: this.createProjectsContent() },
+            apps: { title: 'Apps', color: '#e0e0e0', content: this.createAppsContent() },
             settings: { title: 'Paramètres', color: '#e0e0e0', content: this.createSettingsContent() },
             terminal: { title: 'Terminal', color: '#e0e0e0', content: this.createTerminalContent() },
             contact: { title: 'Contact', color: '#e0e0e0', content: this.createContactContent() }
@@ -60,7 +61,7 @@ class PortfoliOS {
 
         const config = configs[appId];
         window.innerHTML = `
-            <div class="window-header" style="background-color: ${config.color}">
+            <div class="window-header" id="${appId}" style="background-color: ${config.color}">
                 <div class="window-title">
                     <span>${config.title}</span>
                 </div>
@@ -96,12 +97,27 @@ class PortfoliOS {
     }
 
     // Crée le contenu pour la fenêtre "Projets"
-    createProjectsContent() {
+    createAppsContent() {
+        const projects = [
+            { name: 'MyNyl', logo: 'images/mynyl-light.png', link: 'https://mynyl.netlify.app/' },
+            { name: 'GobMouche', logo: 'images/frog.png', link: 'https://tr0lgar.github.io/Kermit/' },
+            { name: 'CatFacts', logo: 'images/cat.png', link: 'https://tr0lgar.github.io/RandomCatFacts/' },
+            { name: 'portfoliOS', logo: 'images/logo.png', link: 'https://github.com/Tr0lgar/portfoliOS' },
+            // Ajouter d'autres projets ici
+        ];
+    
+        const projectItems = projects.map(project => `
+            <div class="app-item">
+                <a href="${project.link}" target="_blank">
+                    <img src="${project.logo}" alt="${project.name}">
+                    <span>${project.name}</span>
+                </a>
+            </div>
+        `).join('');
+    
         return `
-            <h2>Mes Projets</h2>
-            <div class="projects-grid">
-                <p>Work in progress</p>
-                <!-- Ajouter projets ici -->
+            <div class="app-grid">
+                ${projectItems}
             </div>
         `;
     }

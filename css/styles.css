@@ -73,10 +73,11 @@ body {
     position: absolute;
     min-width: 400px;
     min-height: 300px;
-    background: #f9f9f9;
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(60px);
     border-radius: 8px;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-    border: 1px solid #ddd;
+    border: none;
     resize: both;
     overflow: hidden;
     transition: all 0.3s ease;
@@ -96,9 +97,8 @@ body {
     align-items: center;
     padding: 12px 16px;
     cursor: move;
-    border-bottom: 1px solid #ddd;
     font-weight: bold;
-    color: #333;
+    color: #222;
 }
 
 .window-title {
@@ -123,7 +123,7 @@ body {
 .window-button {
     width: 24px;
     height: 24px;
-    background: #e0e0e0;
+    background: none;
     border: none;
     border-radius: 4px;
     cursor: pointer;
@@ -134,20 +134,67 @@ body {
 }
 
 .window-button:hover {
-    background: #c0c0c0;
+    background: rgba(9, 146, 164, 0.22);
 }
 
 .window-button.close:hover {
-    background: #f44336;
+    background: rgba(255, 0, 0, 0.6);
 }
 
 .window-content {
     padding: 16px;
     height: calc(100% - 48px);
     overflow-y: auto;
-    color: #333;
+    color: #222;
     font-size: 0.95rem;
     line-height: 1.5;
+}
+
+
+#apps {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.app-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 100px));
+    gap: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+    justify-content: center;
+}
+
+.app-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: none;
+    border-radius: 3px;
+    padding: 0.5em;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.app-item:hover {
+    background: rgba(225, 225, 225, 0.5);
+}
+
+.app-item img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 0.5em;
+}
+
+.app-item span {
+    font-size: 14px;
+    font-weight: bold;
+    color: #222;
+    
+}
+
+.app-item a {
+    text-decoration: none;
 }
 
 .terminal {
@@ -155,7 +202,7 @@ body {
 }
 
 .terminal span {
-    color: #2ecc71;
+    color: #2ae377;
 }
 
 ::-webkit-scrollbar {
@@ -178,7 +225,7 @@ body {
     margin-bottom: 16px;
     background: #ffffff;
     border: 1px solid #ccc;
-    color: #333;
+    color: #222;
     border-radius: 8px;
     transition: all 0.2s ease;
 }

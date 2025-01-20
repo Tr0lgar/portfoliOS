@@ -55,6 +55,12 @@ body {
     z-index: 9999;
 }
 
+img {
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
 .app-icon img {
     height: 1.5em;
     width: 1.5em;

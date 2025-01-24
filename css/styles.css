@@ -149,7 +149,7 @@ img {
 }
 
 .window-content {
-    padding: 16px;
+    padding: 1em 1em 3em 1em;
     height: calc(100% - 48px);
     overflow-y: auto;
     color: #222;
@@ -161,12 +161,65 @@ img {
     background: rgba(255, 255, 255, 0.5);
 }
 
-#portfoliOS .window-content h3 {
-    margin-top: 1em;
+.window-content h3 {
+    margin-top: 1.5em;
+    font-size: 1.4rem;
 }
 
-#portfoliOS .window-content li {
+.window-content li {
     margin-left: 1em;
+}
+
+.about-me {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    min-height: 100vh; 
+    padding: 20px;
+    box-sizing: border-box;
+    color: #222;
+    line-height: 1.6;
+}
+
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 0 auto 16px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.about-me > * {
+    max-width: 600px;
+}
+
+.about-me h2 {
+    font-size: 1.8rem;
+    margin-bottom: 16px;
+}
+
+.about-me ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.about-me ul li {
+    font-size: 1rem;
+    margin-left: 0;
+    margin-bottom: 8px;
+}
+
+.about-me a {
+    color: #0dacc1;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.about-me a:hover {
+    color: #08818c;
+    text-decoration: underline;
 }
 
 .app-grid {

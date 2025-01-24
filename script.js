@@ -85,39 +85,38 @@ class PortfoliOS {
         return `
             <h2>portfoliOS</h2>
             <p>
-                <strong>Welcome to portfoliOS!</strong>
+                <strong>Bienvenue sur portfoliOS !</strong>
             </p>
             <p>
-                portfoliOS is a unique twist on the traditional portfolio. Instead of a static webpage, 
-                I envisioned a fully interactive experience inspired by the look and feel of an operating system (OS). 
-                It’s a playful and creative way to showcase my projects, skills, and personality while engaging visitors.
+                portfoliOS est une approche unique du portfolio traditionnel. Plutôt qu’une simple page web statique, 
+                j’ai imaginé une expérience interactive inspirée de l’apparence et des fonctionnalités d’un système d’exploitation (OS). 
+                C’est une façon ludique et créative de présenter mes projets, mes compétences et ma personnalité tout en engageant les visiteurs.
             </p>
-            <h3>What is portfoliOS?</h3>
+            <h3>Qu’est-ce que portfoliOS ?</h3>
             <p>
-                portfoliOS replicates key features of an OS, such as draggable windows, a taskbar with app shortcuts, 
-                and interactive applications. Each “application” represents a section of the portfolio:
+                portfoliOS reproduit certaines fonctionnalités clés d’un système d’exploitation, telles que des fenêtres déplaçables, 
+                une barre des tâches avec des raccourcis d’applications, et des applications interactives. Chaque “application” représente une section de mon portfolio :
             </p>
             <ul>
-                <li><strong>About:</strong> Learn more about me and my background (coming soon!).</li>
-                <li><strong>Projects:</strong> Explore my featured work, with links and descriptions.</li>
-                <li><strong>Settings:</strong> Adjust themes or personalize your experience (coming soon!).</li>
-                <li><strong>Terminal:</strong> An experimental feature to interact with the site in a command-line interface (coming soon!).</li>
-                <li><strong>Contact:</strong> Easily get in touch with me (coming soon!).</li>
+                <li><strong>À propos :</strong> En savoir plus sur moi et mon parcours (bientôt disponible !).</li>
+                <li><strong>Projets :</strong> Découvrez mes réalisations principales.</li>
+                <li><strong>Paramètres :</strong> Ajustez le thème ou personnalisez votre expérience (bientôt disponible !).</li>
+                <li><strong>Terminal :</strong> Une fonctionnalité expérimentale pour interagir avec le site via une interface en ligne de commande (bientôt disponible !).</li>
+                <li><strong>Contact :</strong> Une façon simple de me contacter (bientôt disponible !).</li>
             </ul>
-            <h3>Why build a portfolio like this?</h3>
+            <h3>Pourquoi créer un portfolio comme celui-ci ?</h3>
             <p>
-                I wanted to push the boundaries of what a portfolio could be. By building portfoliOS, I combined my love for 
-                development, design, and creative experimentation. The goal is to demonstrate my technical skills while 
-                creating something fun and memorable for visitors.
+                Je voulais repousser les limites de ce qu’un portfolio pouvait être. En développant portfoliOS, j’ai combiné 
+                ma passion pour le développement et l’expérimentation créative. Mon objectif est de démontrer mes compétences techniques tout en offrant une expérience amusante et mémorable aux visiteurs.
             </p>
-            <h3>Technologies Used</h3>
+            <h3>Technologies utilisées</h3>
             <p>
-                portfoliOS is built using HTML, CSS, and JavaScript, without relying heavily on external frameworks. 
-                This keeps the codebase lightweight and provides an opportunity to focus on core web development principles. 
-                However, as the project grows, I might integrate tools or frameworks as needed.
+                portfoliOS est développé en utilisant HTML, CSS et JavaScript, sans dépendre fortement de frameworks externes. 
+                Cela permet de garder le code léger tout en mettant l’accent sur les principes fondamentaux du développement web. 
+                Cependant, au fur et à mesure de l’évolution du projet, je pourrais intégrer des outils ou frameworks si nécessaire.
             </p>
             <p>
-                Thank you for visiting portfoliOS! Feel free to explore and check out my work. 😊
+                Merci de visiter portfoliOS ! N’hésitez pas à explorer et à découvrir mon travail. 😊
             </p>
         `;
     }
@@ -125,8 +124,46 @@ class PortfoliOS {
     // Crée le contenu pour la fenêtre "À Propos"
     createAboutContent() {
         return `
-            <h2>À propos de moi</h2>
-            <p>Work in progress</p>
+            <div class="about-me">
+                <img src="images/profile-picture.png" alt="Photo de Mathis" class="profile-photo">
+                <h2>👋 Bonjour, je suis Mathis !</h2>
+                <p>
+                    Passionné par les défis, la précision et les solutions concrètes, j’ai découvert le développement Web 
+                    pendant le confinement COVID-19. Initialement attiré par la chirurgie, j’ai réorienté ma rigueur scientifique 
+                    vers la création de solutions digitales. Après un détour par un cursus en informatique de gestion, j’ai choisi une formation 
+                    en développement web, plus axée sur la pratique.
+                </p>
+                <br>
+                <p>
+                    💡 J'adore apprendre de nouvelles technologies et relever des défis techniques pour améliorer mes compétences.
+                </p>
+                
+                <h3>🚀 Ce que je fais actuellement :</h3>
+                <ul>
+                    <li>🌱 Formation intensive en développement Web full stack.</li>
+                    <li>🛠️ Exploration de technologies modernes : <strong>HTML</strong>, <strong>CSS</strong>, 
+                        <strong>JavaScript</strong>, <strong>Node.js</strong>, <strong>React.js</strong>, <strong>Angular</strong>, 
+                        <strong>Express</strong>, <strong>MongoDB</strong>.
+                    </li>
+                    <li>📚 Projets pratiques et collaboratifs pour renforcer mes compétences techniques.</li>
+                </ul>
+                
+                <h3>🧰 Mes outils et compétences actuels :</h3>
+                <ul>
+                    <li><strong>Frontend :</strong> HTML5, CSS3, SCSS, JavaScript.</li>
+                    <li><strong>Backend :</strong> PHP, Laravel, Java, C#.</li>
+                    <li><strong>Bases de données :</strong> SQL, PostgreSQL.</li>
+                    <li><strong>Outils :</strong> Git/GitHub/GitLab, VS Code, suite Jetbrains, Jira, Confluence.</li>
+                    <li><strong>Méthodes de travail :</strong> Agile (SCRUM), gestion de projets collaboratifs, résolution de problèmes.</li>
+                </ul>
+                
+                <h3>🌍 Retrouvez-moi ici :</h3>
+                <ul>
+                    <li><strong>LinkedIn :</strong> <a href="https://www.linkedin.com/in/mathis-derwael" target="_blank">Mathis Derwael</a></li>
+                    <li><strong>GitHub :</strong> <a href="https://github.com/Tr0lgar" target="_blank">GitHub</a></li>
+                </ul>
+            </div>
+
         `;
     }
 

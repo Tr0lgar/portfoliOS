@@ -157,9 +157,16 @@ img {
     line-height: 1.5;
 }
 
-
 #apps {
     background: rgba(255, 255, 255, 0.5);
+}
+
+#portfoliOS .window-content h3 {
+    margin-top: 1em;
+}
+
+#portfoliOS .window-content li {
+    margin-left: 1em;
 }
 
 .app-grid {

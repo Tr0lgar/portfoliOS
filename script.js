@@ -84,7 +84,41 @@ class PortfoliOS {
     createPortfoliOSContent() {
         return `
             <h2>portfoliOS</h2>
-            <p>Work in progress</p>
+            <p>
+                <strong>Welcome to portfoliOS!</strong>
+            </p>
+            <p>
+                portfoliOS is a unique twist on the traditional portfolio. Instead of a static webpage, 
+                I envisioned a fully interactive experience inspired by the look and feel of an operating system (OS). 
+                It’s a playful and creative way to showcase my projects, skills, and personality while engaging visitors.
+            </p>
+            <h3>What is portfoliOS?</h3>
+            <p>
+                portfoliOS replicates key features of an OS, such as draggable windows, a taskbar with app shortcuts, 
+                and interactive applications. Each “application” represents a section of the portfolio:
+            </p>
+            <ul>
+                <li><strong>About:</strong> Learn more about me and my background (coming soon!).</li>
+                <li><strong>Projects:</strong> Explore my featured work, with links and descriptions.</li>
+                <li><strong>Settings:</strong> Adjust themes or personalize your experience (coming soon!).</li>
+                <li><strong>Terminal:</strong> An experimental feature to interact with the site in a command-line interface (coming soon!).</li>
+                <li><strong>Contact:</strong> Easily get in touch with me (coming soon!).</li>
+            </ul>
+            <h3>Why build a portfolio like this?</h3>
+            <p>
+                I wanted to push the boundaries of what a portfolio could be. By building portfoliOS, I combined my love for 
+                development, design, and creative experimentation. The goal is to demonstrate my technical skills while 
+                creating something fun and memorable for visitors.
+            </p>
+            <h3>Technologies Used</h3>
+            <p>
+                portfoliOS is built using HTML, CSS, and JavaScript, without relying heavily on external frameworks. 
+                This keeps the codebase lightweight and provides an opportunity to focus on core web development principles. 
+                However, as the project grows, I might integrate tools or frameworks as needed.
+            </p>
+            <p>
+                Thank you for visiting portfoliOS! Feel free to explore and check out my work. 😊
+            </p>
         `;
     }
 

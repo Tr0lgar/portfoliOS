@@ -131,7 +131,7 @@ class PortfoliOS {
     createAboutContent() {
         return `
             <div class="about-me">
-                <img src="images/profile-picture.png" alt="Photo de Mathis" class="profile-photo">
+                <img src="images/profile-picture.jpg" alt="Photo de Mathis" class="profile-photo">
                 <h2>👋 Bonjour, je suis Mathis !</h2>
                 <p>
                     Passionné par les défis, la précision et les solutions concrètes, j’ai découvert le développement Web 

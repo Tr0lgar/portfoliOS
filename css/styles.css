@@ -11,7 +11,8 @@ body {
     background-size: cover;
     background-position: center;
     color: white;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 .taskbar-container {
@@ -87,6 +88,7 @@ img {
     resize: both;
     overflow: hidden;
     transition: all 0.3s ease;
+    animation: windowOpen 0.2s ease-out;
 }
 
 .window.maximized {
@@ -185,8 +187,8 @@ img {
 }
 
 .profile-photo {
-    width: 150px;
-    height: 150px;
+    width: 250px;
+    height: 250px;
     border-radius: 50%;
     margin: 0 auto 16px;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
@@ -226,8 +228,8 @@ img {
 .app-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(100px, 100px));
-    gap: 20px;
-    padding: 20px;
+    gap: 16px;
+    padding: 16px;
     box-sizing: border-box;
     justify-content: center;
 }
@@ -332,6 +334,63 @@ img {
     }
 }
 
-.window {
-    animation: windowOpen 0.2s ease-out;
+
+/* Grand écran (ordinateurs de bureau) */
+@media (min-width: 1024px) {
+    .window {
+        min-width: 600px;
+        min-height: 400px;
+    }
+}
+
+/* Tablettes */
+@media (max-width: 1024px) and (min-width: 768px) {
+    .window {
+        width: 100% !important;
+        height: 100% !important;
+        top: 0 !important;
+        left: 0 !important;
+        transform: none !important;
+        border-radius: 0;
+        resize: none;
+    }
+
+    .window-header {
+        justify-content: space-between;
+        padding: 16px;
+    }
+
+    .window-controls {
+        gap: 8px;
+    }
+
+    .maximize, .minimize {
+        display: none;
+    }
+}
+
+/* Mobiles */
+@media (max-width: 768px) {
+    .window {
+        width: 100% !important;
+        height: 100% !important;
+        top: 0 !important;
+        left: 0 !important;
+        transform: none !important;
+        border-radius: 0;
+        resize: none;
+    }
+
+    .window-header {
+        justify-content: space-between;
+        padding: 16px;
+    }
+
+    .window-controls {
+        gap: 8px;
+    }
+
+    .maximize, .minimize {
+        display: none;
+    }
 }

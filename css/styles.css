@@ -90,6 +90,7 @@ img {
 }
 
 .window.maximized {
+    backdrop-filter: blur(100px);
     width: 100% !important;
     height: 100% !important;
     top: 0px !important;
@@ -320,18 +321,17 @@ img {
     box-shadow: 0 4px 12px rgba(129, 199, 132, 0.3);
 }
 
-
 @keyframes windowOpen {
     from {
-        transform: translate(-50%, -50%) scale(0.9);
         opacity: 0;
+        transform: translateY(50%) scale(0.9);
     }
     to {
-        transform: translate(-50%, -50%) scale(1);
         opacity: 1;
+        transform: translateY(0) scale(1);
     }
 }
 
 .window {
-    animation: windowOpen 0.3s ease;
+    animation: windowOpen 0.2s ease-out;
 }

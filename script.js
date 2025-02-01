@@ -236,8 +236,12 @@ class PortfoliOS {
         const icon = document.querySelector(`.app-icon[data-app="${appId}"]`);
     
         closeBtn.addEventListener('click', () => {
-            window.style.display = 'none';
-            icon.classList.remove('active');
+            window.classList.add('closing');
+            window.addEventListener('animationend', () => {
+                window.style.display = 'none';
+                window.classList.remove('closing');
+                icon.classList.remove('active');
+            }, { once: true });
         });
 
         maximizeBtn.addEventListener('click', () => {
@@ -246,8 +250,12 @@ class PortfoliOS {
         });
     
         minimizeBtn.addEventListener('click', () => {
-            window.style.display = 'none';
-            icon.classList.add('active');
+            window.classList.add('minimizing');
+            window.addEventListener('animationend', () => {
+                window.style.display = 'none';
+                window.classList.remove('minimizing');
+                icon.classList.add('active');
+            }, { once: true });
         });
     
         window.addEventListener('mousedown', () => this.focusWindow(window));

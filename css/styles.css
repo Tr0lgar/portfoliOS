@@ -17,17 +17,21 @@ body {
 
 .taskbar-container {
     position: fixed;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
+    bottom: 16px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
     z-index: 10000;
     pointer-events: none;
+    padding: 0 16px;
 }
 
 .taskbar {
     position: relative;
     pointer-events: auto;
-    bottom: 16px;
     height: 56px;
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
@@ -38,6 +42,8 @@ body {
     gap: 8px;
     box-shadow: 0 4px 24px rgba(0, 0, 0, 0.2);
     border: 1px solid rgba(255, 255, 255, 0.1);
+    width: fit-content;
+    max-width: 100%;
 }
 
 .app-icon {
@@ -99,6 +105,16 @@ img {
     left: 0px !important;
     transform: none !important;
     transition: all 0.3s ease;
+}
+
+.window.minimizing {
+    animation: windowMinimize 0.4s ease-in forwards;
+    pointer-events: none;
+}
+
+.window.closing {
+    animation: windowClose 0.4s ease-in forwards;
+    pointer-events: none;
 }
 
 .window-header {
@@ -334,6 +350,31 @@ img {
     }
 }
 
+/* Animation de minimisation */
+@keyframes windowMinimize {
+    0% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(100%) scale(0.1);
+    }
+}
+
+/* Animation de fermeture */
+@keyframes windowClose {
+    0% {
+        opacity: 1;
+        transform: scale(1) translateZ(0);
+        perspective: 1000px;
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0.3) translateZ(-1000px);
+    }
+}
+
 
 /* Grand écran (ordinateurs de bureau) */
 @media (min-width: 1024px) {
@@ -392,5 +433,14 @@ img {
 
     .maximize, .minimize {
         display: none;
+    }
+
+    .taskbar-container {
+        bottom: 8px;
+    }
+
+    .taskbar {
+        width: 100%;
+        justify-content: space-evenly;
     }
 }

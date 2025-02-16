@@ -169,5 +169,24 @@ class PortfoliOS {
     }
 }
 
+// FIXME: le changement de la classe active ne fonctionne pas mais flemme pour le moment
+document.body.addEventListener("click", (event) => {
+    if (event.target.matches(".settings-sidebar li")) {
+        const sidebar = document.querySelector(".settings-sidebar");
+        const activeItem = document.querySelector(".settings-sidebar li.active");
+
+        // Supprime l'ancienne classe active
+        if (activeItem) activeItem.classList.remove("active");
+
+        // Ajoute la classe active à l'élément cliqué
+        event.target.classList.add("active");
+
+        // Met à jour la position de l'effet glissant
+        const topOffset = event.target.offsetTop;
+        sidebar.style.setProperty("--active-top", `${topOffset}px`);
+    }
+});
+
+
 // Initialisation
 const portfoliOS = new PortfoliOS();

@@ -1,9 +1,11 @@
 import { createPortfoliOSContent } from "./windows/portfoliOS.js";
+import { initPortfoliOSScroll } from "./windows/portfoliOS.js";
 import { createAboutContent } from "./windows/about.js";
 import { createAppsContent } from "./windows/apps.js";
 import { createSettingsContent } from "./windows/settings.js";
 import { createTerminalContent } from "./windows/terminal.js";
 import { createContactContent } from "./windows/contact.js";
+
 class PortfoliOS {
     constructor() {
         // Initialise les propriétés principales : une liste des fenêtres et la fenêtre active
@@ -45,6 +47,12 @@ class PortfoliOS {
         window.style.left = `calc(50% - ${rect.width / 2}px)`;
         window.style.top = `calc(50% - ${rect.height / 2}px)`;
 
+        // Si c'est la première ouverture de portfoliOS, on la maximise directement
+        if (appId === "portfoliOS" && !window.dataset.opened) {
+            window.classList.add("maximized");
+            window.dataset.opened = true; // Marque la fenêtre comme déjà ouverte une fois
+        }
+
         this.focusWindow(window);
         this.makeDraggable(window);
         icon.classList.add('active');
@@ -58,9 +66,6 @@ class PortfoliOS {
         window.dataset.appId = appId;
         window.style.width = '600px';
         window.style.height = '400px';
-        // window.style.left = '50%';
-        // window.style.top = '50%';
-        // window.style.transform = 'translate(-50%, -50%)';
 
         const configs = {
             portfoliOS: { title: 'portfoliOS', color: '#e0e0e0', content: createPortfoliOSContent() },
@@ -89,6 +94,13 @@ class PortfoliOS {
         `;
 
         this.initWindowControls(window);
+
+        if (appId === "portfoliOS") {
+            setTimeout(() => {
+                initPortfoliOSScroll();
+            }, 0);
+        }
+
         return window;
     }
 
@@ -169,7 +181,7 @@ class PortfoliOS {
     }
 }
 
-// FIXME: le changement de la classe active ne fonctionne pas mais flemme pour le moment
+// FIXME: le changement de la classe activeS dans settings ne fonctionne pas mais flemme pour le moment
 document.body.addEventListener("click", (event) => {
     if (event.target.matches(".settings-sidebar li")) {
         const sidebar = document.querySelector(".settings-sidebar");

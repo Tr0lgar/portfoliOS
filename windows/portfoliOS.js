@@ -59,7 +59,7 @@ export function initPortfoliOSScroll() {
     rotateCards();
 
     windowContent.addEventListener("scroll", () => {
-        const distance = windowContent.clientHeight * 0.5;
+        const distance = windowContent.clientHeight * 0.15;
         const topVal = stackArea.getBoundingClientRect().top;
         const index = -1 * (topVal / distance + 1);
         const adjustedIndex = Math.floor(index);

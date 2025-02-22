@@ -4,6 +4,8 @@ import { createAboutContent } from "./windows/about.js";
 import { createAppsContent } from "./windows/apps.js";
 import { createSettingsContent } from "./windows/settings.js";
 import { createTerminalContent } from "./windows/terminal.js";
+import { Terminal } from "./windows/terminal.js";
+import { terminalCommands } from "./windows/terminal.js";
 import { createContactContent } from "./windows/contact.js";
 
 class PortfoliOS {
@@ -30,10 +32,18 @@ class PortfoliOS {
 
         // Si la fenêtre existe déjà, elle est remise en avant
         if (this.windows.has(appId)) {
-            const win = this.windows.get(appId);;
+            const win = this.windows.get(appId);
             win.style.display = 'block';
             this.focusWindow(win);
             icon.classList.add('active');
+
+            // Refocus sur l'input du terminal
+            if (appId === "terminal") {
+                const input = win.querySelector('.terminal-prompt');
+                if (input) {
+                    input.focus()
+                }
+            }
             return;
         }
 
@@ -51,6 +61,13 @@ class PortfoliOS {
         if (appId === "portfoliOS" && !window.dataset.opened) {
             window.classList.add("maximized");
             window.dataset.opened = true; // Marque la fenêtre comme déjà ouverte une fois
+        }
+
+        if (appId === "terminal") {
+            const container = document.getElementById("terminal-container");
+            if (container) {
+                new Terminal(container, terminalCommands);
+            }
         }
 
         this.focusWindow(window);

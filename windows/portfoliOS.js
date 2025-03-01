@@ -2,7 +2,7 @@ export function createPortfoliOSContent() {
     return `
         <div class="stack-area">
         <div class="left">
-            <img src="images/logo.png">
+            <img src="assets/logo.svg">
             <p>
                 portfoliOS est une approche unique du portfolio traditionnel. Plutôt qu’une simple page web statique, 
                 j’ai imaginé une expérience intéractive inspirée de l’apparence et des fonctionnalités d’un système d’exploitation (OS). 

@@ -4,6 +4,7 @@ export function createAppsContent() {
         { name: 'GobMouche', logo: 'images/frog.png', link: 'https://tr0lgar.github.io/Kermit/' },
         { name: 'CatFacts', logo: 'images/cat.png', link: 'https://tr0lgar.github.io/RandomCatFacts/' },
         { name: 'portfoliOS', logo: './assets/logo.svg', link: 'https://github.com/Tr0lgar/portfoliOS' },
+        { name: 'Toolzy', logo: './assets/toolzy-logo.png', link: 'https://tr0lgar.github.io/toolzy-doc/' },
         // Ajouter d'autres projets ici
     ];
 

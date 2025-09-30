@@ -82,14 +82,14 @@ export class Terminal {
         if (command in this.commands) {
             this.commands[command](this, args);
         } else {
-            this.log(`Commande '${command}' non reconnue. Tapez "help" pour la liste des commandes.`);
+            this.log(`Command '${command}' not found. Type "help" to show command list.`);
         }
     }
 }
 
 export const terminalCommands = {
     help: function(terminal, args) {
-        terminal.log("Commandes disponibles : " + Object.keys(terminalCommands).join(", "));
+        terminal.log("Available commands : " + Object.keys(terminalCommands).join(", "));
     },
     clear: function(terminal, args) {
         terminal.clear();

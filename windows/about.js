@@ -1,44 +1,43 @@
 export function createAboutContent() {
     return `
         <div class="about-me">
-            <img src="images/profile-picture.jpg" alt="Photo de Mathis" class="profile-photo">
-            <h2>👋 Bonjour, je suis Mathis !</h2>
+            <img src="images/profile-picture.jpg" alt="Photo of Mathis" class="profile-photo">
+            <h2>👋 Hi, I'm Mathis!</h2>
             <p>
-                Passionné par les défis, la précision et les solutions concrètes, j’ai découvert le développement Web 
-                pendant le confinement COVID-19. Initialement attiré par la chirurgie, j’ai réorienté ma rigueur scientifique 
-                vers la création de solutions digitales. Après un détour par un cursus en informatique de gestion, j’ai choisi une formation 
-                en développement web, plus axée sur la pratique, que je viens de conclure avec un stage de 8 semaines en entreprise.
+                Driven by challenges, precision, and tangible results, I discovered web development during the COVID-19 lockdown.
+                Initially drawn to surgery, I redirected that scientific rigor toward building digital solutions. After a brief
+                detour through business IT studies, I chose a hands-on web development program, which I recently completed with
+                an 8-week internship in a company.
             </p>
             <br>
             <p>
-                💡 J'adore apprendre de nouvelles technologies et relever des défis techniques pour améliorer mes compétences.
+                💡 I love learning new technologies and tackling technical challenges to level up my skills.
             </p>
             
-            <h3>🚀 Ce que je fais actuellement :</h3>
+            <h3>🚀 What I'm working on right now</h3>
             <ul>
-                <li>🔍 Recherche un job dans le développement web.</li>
-                <li>🛠️ Exploration de technologies modernes : <strong>HTML</strong>, <strong>CSS</strong>, 
+                <li>🔍 Looking for a role in web development.</li>
+                <li>🛠️ Exploring modern technologies: <strong>HTML</strong>, <strong>CSS</strong>, 
                     <strong>JavaScript</strong>, <strong>Node.js</strong>, <strong>React.js</strong>, <strong>Angular</strong>, 
                     <strong>Express</strong>, <strong>MongoDB</strong>.
                 </li>
-                <li>📚 Je bosse sur mes side projects personnels, comme ce portfolio.</li>
+                <li>📚 Building personal side projects—like this portfolio.</li>
             </ul>
             
-            <h3>🧰 Mes outils et compétences actuels :</h3>
+            <h3>🧰 My current tools and skills</h3>
             <ul>
-                <li><strong>Frontend :</strong> HTML5, CSS3, SCSS, JavaScript/Typescript, Angular, React, Vue.</li>
-                <li><strong>Backend :</strong> Différents frameworks JS. PHP, Laravel, Java, C#.</li>
-                <li><strong>Bases de données :</strong> SQL, PostgreSQL, MySQL, MongoDB.</li>
-                <li><strong>Outils :</strong> Git/GitHub/GitLab, VS Code, suite Jetbrains, Jira, Confluence.</li>
-                <li><strong>Méthodes de travail :</strong> Agile (SCRUM), gestion de projets collaboratifs, résolution de problèmes.</li>
+                <li><strong>Frontend:</strong> HTML5, CSS3, SCSS, JavaScript/TypeScript, Angular, React, Vue.</li>
+                <li><strong>Backend:</strong> Various JS frameworks; PHP, Laravel, Java, C#.</li>
+                <li><strong>Databases:</strong> SQL, PostgreSQL, MySQL, MongoDB.</li>
+                <li><strong>Tooling:</strong> Git/GitHub/GitLab, VS Code, JetBrains suite, Jira, Confluence.</li>
+                <li><strong>Ways of working:</strong> Agile (Scrum), collaborative project management, problem solving.</li>
             </ul>
             
-            <h3>🌍 Retrouvez-moi ici :</h3>
+            <h3>🌍 Find me here</h3>
             <ul>
-                <li><strong>LinkedIn :</strong> <a href="https://www.linkedin.com/in/mathis-derwael" target="_blank">Mathis Derwael</a></li>
-                <li><strong>GitHub :</strong> <a href="https://github.com/Tr0lgar" target="_blank">GitHub</a></li>
+                <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/mathis-derwael" target="_blank" rel="noopener noreferrer">Mathis Derwael</a></li>
+                <li><strong>GitHub:</strong> <a href="https://github.com/Tr0lgar" target="_blank" rel="noopener noreferrer">GitHub</a></li>
             </ul>
         </div>
-
     `;
 }

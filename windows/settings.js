@@ -1,7 +1,7 @@
 export function createSettingsContent() {
     return `
         <div class="settings-container">
-            <!-- Barre de navigation latérale -->
+            <!-- Sidebar -->
             <nav class="settings-sidebar">
                 <ul>
                     <li data-section="general" class="active">Général</li>
@@ -11,23 +11,23 @@ export function createSettingsContent() {
                 </ul>
             </nav>
 
-            <!-- Contenu dynamique -->
+            <!-- Content -->
             <div class="settings-content">
                 <div id="general" class="settings-section active">
-                    <h2>Paramètres Généraux</h2>
-                    <p>Réglages généraux de l'application.</p>
+                    <h2>General settings</h2>
+                    <p>Global application preferences and basic behavior.</p>
                 </div>
                 <div id="theme" class="settings-section">
                     <h2>Thème</h2>
-                    <p>Personnalisez l'apparence de l'OS.</p>
+                    <p>Customize the look and feel of the OS.</p>
                 </div>
                 <div id="notifications" class="settings-section">
                     <h2>Notifications</h2>
-                    <p>Gérez vos préférences de notifications.</p>
+                    <p>Manage your notification preferences.</p>
                 </div>
                 <div id="account" class="settings-section">
                     <h2>Compte</h2>
-                    <p>Informations et gestion du compte.</p>
+                    <p>Account information and management.</p>
                 </div>
             </div>
         </div>

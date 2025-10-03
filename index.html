@@ -2,23 +2,63 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>PortfoliOS</title>
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="icon" href="./assets/logo.svg">
     <script type="module" src="./script.js" defer></script>
-
 </head>
 <body>
-    <div class="taskbar-container">
-        <div class="taskbar">
-            <button class="app-icon" data-app="portfoliOS"><img src="./assets/logo.svg"></button>
-            <button class="app-icon" data-app="about"><img src="./assets/face.svg"></button>
-            <button class="app-icon" data-app="apps"><img src="./assets/apps.svg"></button>
-            <button class="app-icon" data-app="settings"><img src="./assets/settings.svg"></button>
-            <button class="app-icon" data-app="terminal"><img src="./assets/terminal.svg"></button>
-            <button class="app-icon" data-app="contact"><img src="./assets/contact.svg"></button>
+<!-- Desktop taskbar -->
+<div class="taskbar-container desktop-only">
+    <div class="taskbar">
+        <button class="app-icon" data-app="portfoliOS"><img src="./assets/logo.svg" alt="portfoliOS"></button>
+        <button class="app-icon" data-app="about"><img src="./assets/face.svg" alt="About"></button>
+        <button class="app-icon" data-app="apps"><img src="./assets/apps.svg" alt="Apps"></button>
+        <button class="app-icon" data-app="settings"><img src="./assets/settings.svg" alt="Settings"></button>
+        <button class="app-icon" data-app="terminal"><img src="./assets/terminal.svg" alt="Terminal"></button>
+        <button class="app-icon" data-app="contact"><img src="./assets/contact.svg" alt="Contact"></button>
+    </div>
+</div>
+
+<!-- Mobile home screen -->
+<div class="mobile-home mobile-only">
+    <div class="status-bar">
+        <span class="time" id="mobile-time">12:00</span>
+        <div class="status-icons">
+            <span>📶</span>
+            <span>🔋</span>
         </div>
     </div>
+
+    <div class="home-grid">
+        <button class="home-app-icon" data-app="portfoliOS">
+            <img src="./assets/logo.svg" alt="portfoliOS">
+            <span>portfoliOS</span>
+        </button>
+        <button class="home-app-icon" data-app="about">
+            <img src="./assets/face.svg" alt="About">
+            <span>About</span>
+        </button>
+        <button class="home-app-icon" data-app="apps">
+            <img src="./assets/apps.svg" alt="Apps">
+            <span>Projects</span>
+        </button>
+        <button class="home-app-icon" data-app="settings">
+            <img src="./assets/settings.svg" alt="Settings">
+            <span>Settings</span>
+        </button>
+        <button class="home-app-icon" data-app="terminal">
+            <img src="./assets/terminal.svg" alt="Terminal">
+            <span>Terminal</span>
+        </button>
+        <button class="home-app-icon" data-app="contact">
+            <img src="./assets/contact.svg" alt="Contact">
+            <span>Contact</span>
+        </button>
+    </div>
+
+    <div class="home-indicator"></div>
+</div>
 </body>
 </html>

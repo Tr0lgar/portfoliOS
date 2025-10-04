@@ -663,6 +663,10 @@ body.mobile-layout .window-button.minimize {
     .story-card {
         grid-column: span 2;
     }
+
+    .cta-card {
+        grid-column: span 2;
+    }
 }
 
 @container (min-width: 900px) {
@@ -675,7 +679,7 @@ body.mobile-layout .window-button.minimize {
     }
 
     .cta-card {
-        grid-column: span 3;
+        grid-column: span 2;
     }
 }
 
@@ -832,9 +836,14 @@ body.mobile-layout .window-button.minimize {
 
 /* CTA Card */
 .cta-card {
+    display: flex;
+    flex-direction: column;
     background: linear-gradient(135deg, #0dacc1 0%, #508a96 100%);
     color: white;
     text-align: center;
+    align-items: center;
+    justify-content: center;
+
 }
 
 .cta-card h3 {
